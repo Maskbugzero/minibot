@@ -58,4 +58,5 @@ fire_time_moring = "8 0"    # 选填 早上发送时间默认为7:00
 
 ## 基于
 [Nonebot2](https://github.com/nonebot/nonebot2)
+
 [nonebot_plugin_firexN](https://github.com/GC-ZF/nonebot_plugin_firexN)
