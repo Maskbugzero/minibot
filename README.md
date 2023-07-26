@@ -54,8 +54,13 @@ fire_sentence_moring = ["句子1","句子2","..."]    # 早上随机发送该字
 fire_time_vip_moring = "8 0"    # 选填 早上发送时间默认为7:00            
 fire_time_moring = "8 0"    # 选填 早上发送时间默认为7:00           
 ```
+## Docker使用配置
+将上述`.env.dev`文件存于文件夹`minibot`，其中`minibot`可以自定义
 
-
+使用命令
+```shell
+docker run -d --name minibot --restart=always -v /home/docker/minibot/.env.dev:/app/.env.dev -p 8080:8080 maskbugzero/minibot
+```
 ## 基于
 [Nonebot2](https://github.com/nonebot/nonebot2)
 
