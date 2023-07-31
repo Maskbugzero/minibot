@@ -13,5 +13,9 @@ RUN python3 -m pip config set global.index-url https://mirrors.aliyun.com/pypi/s
 # 安装Python依赖包
 RUN python3 -m pip install -r requirements.txt
 
+# 设置时区为Asia/Shanghai
+ENV TZ=Asia/Shanghai
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+
 # 运行Python应用程序
 CMD ["python3", "bot.py"]
